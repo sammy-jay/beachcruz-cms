@@ -1,8 +1,6 @@
-// /schemas/boat.js
-
 export default {
   name: 'boat',
-  title: 'Boat',
+  title: 'Boat Listing',
   type: 'document',
   fields: [
     {
@@ -56,6 +54,43 @@ export default {
       ],
       description: 'The rental price for the boat',
     },
-    // Add more fields as needed, such as capacity, features, etc.
+    {
+      name: 'currentLocation',
+      title: 'Current Location',
+      type: 'string',
+      description: 'The current location of the boat',
+    },
+    {
+      name: 'berths',
+      title: 'Berths',
+      type: 'number',
+      description: 'The number of berths (sleeping spaces) available on the boat',
+    },
+    {
+      name: 'features',
+      title: 'Features',
+      type: 'object',
+      fields: [
+        {
+          name: 'engine',
+          title: 'Engine',
+          type: 'string',
+          description: 'Type of engine on the boat',
+        },
+        {
+          name: 'length',
+          title: 'Length',
+          type: 'number',
+          description: 'Length of the boat in meters',
+        },
+        {
+          name: 'capacity',
+          title: 'Capacity',
+          type: 'number',
+          description: 'Maximum capacity of the boat',
+        },
+      ],
+      description: 'Features of the boat',
+    },
   ],
 }
